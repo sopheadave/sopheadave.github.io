@@ -1,6 +1,10 @@
-_site
-.sass-cache
-Gemfile.lock
-*.gem
+# Ignore Jekyll build and cache files
+_site/
 .jekyll-cache/
-.jekyll-cache
+.sass-cache/
+
+# Ignore Ruby gem files
+*.gem
+
+# Optional: If collaborating, you may want to track Gemfile.lock
+# Gemfile.lock
