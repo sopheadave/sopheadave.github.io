@@ -1,9 +1,17 @@
 title: "Hardware Insights"
-email: "your-email@example.com"
 description: "A blog about computer hardware, reviews, and insights."
 baseurl: "" 
 url: "https://sopheadave.github.io" 
-markdown: kramdown
 theme: minima
+markdown: kramdown
+
+# Enable plugins
 plugins:
   - jekyll-feed
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
