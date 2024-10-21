@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Insights</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  {% include header.html %}
+
+  <section id="hero">
+    <h1>Welcome to Hardware Insights</h1>
+    <p>Get the latest insights on hardware, reviews, and guides.</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>Recent Posts</h2>
+    <ul>
+      {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% include footer.html %}
+</body>
+</html>
