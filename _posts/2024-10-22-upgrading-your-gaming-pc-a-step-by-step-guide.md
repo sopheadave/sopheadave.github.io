@@ -4,6 +4,7 @@ title: "Upgrading Your Gaming PC A Step-by-Step Guide"
 date: 2024-10-22
 categories: guides
 ---
+
 As technology evolves, so do gaming requirements. Upgrading your gaming PC can significantly enhance your gaming experience, allowing you to enjoy higher resolutions, smoother frame rates, and the latest titles without lag. In this guide, we will walk you through the process of upgrading various components of your gaming PC, ensuring you get the best performance for your investment.
 
 ## Why Upgrade Your Gaming PC?
