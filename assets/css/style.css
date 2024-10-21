@@ -217,4 +217,75 @@ body.dark-mode article.post {
   color: #ddd;
 }
 
-/* Add your existing styles below... */
+/* Styling for Blog Post: Building Your First Gaming PC */
+.post {
+    background-color: #f9f9f9; /* Light background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+.post h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.post h2,
+.post h3 {
+    color: #444;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+.post p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* List Styles */
+.post ul,
+.post ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Link Styles */
+.post a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+/* Code Block Styles */
+.post pre {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Image Styles */
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Blockquote Styles */
+.post blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+    margin: 15px 0;
+    color: #555;
+    font-style: italic;
+}
