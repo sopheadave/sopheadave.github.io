@@ -83,6 +83,7 @@ main {
   display: flex; /* Use flexbox for layout */
   flex-wrap: wrap; /* Allow wrapping */
   justify-content: space-between; /* Space out items */
+  list-style-type: none; /* Remove bullet points from list */
 }
 
 .post-item {
@@ -112,7 +113,9 @@ main {
 }
 
 /* Button Styles */
-.view-more-btn, .cta-btn, .subscribe-btn {
+.view-more-btn,
+.cta-btn,
+.subscribe-btn {
   display: inline-block;
   background-color: #ffcc00;
   color: #333;
@@ -123,8 +126,29 @@ main {
   transition: background-color 0.3s;
 }
 
-.view-more-btn:hover, .cta-btn:hover, .subscribe-btn:hover {
+.view-more-btn:hover,
+.cta-btn:hover,
+.subscribe-btn:hover {
   background-color: #ff9900;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0; /* Add margin for spacing */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #ffcc00; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
 }
 
 /* Footer Styling */
@@ -133,6 +157,27 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+}
+
+.footer-links {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin-top: 10px; /* Space between copyright and links */
+}
+
+.footer-links li {
+  display: inline; /* Inline the list items */
+  margin: 0 15px; /* Space between links */
+}
+
+.footer-links a {
+  color: #ffcc00; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.footer-links a:hover {
+  color: #fff; /* Change color on hover */
 }
 
 /* Responsive Styles */
