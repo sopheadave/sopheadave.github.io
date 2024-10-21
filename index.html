@@ -6,22 +6,104 @@ layout: default
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hardware Insights</title>
+  <meta name="description" content="Hardware Insights - Get the latest insights, reviews, and guides on hardware technology. Stay updated on CPUs, GPUs, motherboards, and more.">
+  <meta name="keywords" content="Hardware, Reviews, Guides, CPUs, GPUs, Motherboards, Technology">
+  <meta name="author" content="Hardware Insights">
+  <title>Hardware Insights | The Latest in Hardware Technology</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
 </head>
 <body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <!-- Logo and Title -->
+      <div class="logo-title">
+        <a href="/">
+          <img src="/assets/img/logo.png" alt="Hardware Insights Logo" class="logo">
+        </a>
+        <h1><a href="/">Hardware Insights</a></h1>
+      </div>
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
   <section id="hero">
-    <h1>Welcome to Hardware Insights</h1>
-    <p>Get the latest insights on hardware, reviews, and guides.</p>
+    <div class="container">
+      <h1>Welcome to Hardware Insights</h1>
+      <p>Your go-to source for the latest insights, reviews, and guides in the world of hardware technology. Whether you’re building a new PC or upgrading your setup, we’ve got you covered.</p>
+      <a href="#latest-posts" class="cta-btn">Check Latest Posts</a>
+    </div>
   </section>
 
-  <section id="latest-posts">
-    <h2>Recent Posts</h2>
-    <ul>
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+  <!-- Latest Posts Section -->
+  <section id="latest-posts" class="posts-section">
+    <div class="container">
+      <h2>Recent Posts</h2>
+      <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+          <li class="post-item">
+            <a href="{{ post.url }}" class="post-link">
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="/blog" class="view-more-btn">View All Posts</a>
+    </div>
   </section>
+
+  <!-- Popular Categories Section -->
+  <section id="categories" class="categories-section">
+    <div class="container">
+      <h2>Explore Popular Categories</h2>
+      <ul>
+        <li><a href="/categories/cpu">CPUs</a></li>
+        <li><a href="/categories/gpu">GPUs</a></li>
+        <li><a href="/categories/motherboard">Motherboards</a></li>
+        <li><a href="/categories/accessories">Accessories</a></li>
+        <li><a href="/categories/reviews">Reviews</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section id="newsletter" class="newsletter-section">
+    <div class="container">
+      <h2>Join Our Newsletter</h2>
+      <p>Stay updated with the latest hardware news, reviews, and tips. Sign up for our newsletter today!</p>
+      <form action="/subscribe" method="POST" class="newsletter-form">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Hardware Insights. All rights reserved.</p>
+      <ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
