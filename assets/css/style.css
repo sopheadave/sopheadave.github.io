@@ -58,7 +58,28 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #ffcc00;
 }
+/* Logo and Title styling */
+.logo-title {
+  display: flex;
+  align-items: center;
+}
 
+.logo {
+  width: 60px; /* Set width */
+  height: 60px; /* Set height */
+  margin-right: 15px; /* Spacing between logo and title */
+}
+
+.logo-title h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.logo-title h1 a {
+  text-decoration: none;
+  color: inherit;
+}
 /* Mobile Navigation */
 .nav-toggle {
   display: none;
