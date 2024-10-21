@@ -1,46 +1,9 @@
-# Site Settings
-title: Hardware Insights
-description: "In-depth reviews, tutorials, and news for tech enthusiasts. Learn about the latest in hardware from CPUs to peripherals."
-author: sopheadave
-email: sopheadave@gmail.com
+title: "Hardware Insights"
+email: "your-email@example.com"
+description: "A blog about computer hardware, reviews, and insights."
 baseurl: "" 
 url: "https://sopheadave.github.io" 
-
-# Theme Settings
-theme: jekyll-theme-modernist
-
-# Show a download button for your blog (optional)
-show_downloads: false
-
-# Enable pagination for blog posts
-paginate: 10
-paginate_path: "/page/:num/"
-
-# Social Media Settings
-github_username: sopheadave
-
-# Plugins
+markdown: kramdown
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
-
-# Permalinks for cleaner URLs
-permalink: /:title/
-
-# Markdown Processing
-markdown: kramdown
-highlighter: rouge
-
-# Exclude these directories from build
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - _site
-  - .jekyll-cache
-
-# Other Settings
-timezone: America/New_York
