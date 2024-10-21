@@ -19,6 +19,11 @@ body {
   padding: 0;
 }
 
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: #f9f9f9;
+}
+
 /* Layout Structure */
 header {
   background-color: #333;
@@ -54,7 +59,7 @@ header nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* Mobile Navigation Toggle */
+/* Mobile Navigation */
 .nav-toggle {
   display: none;
   background-color: #444;
@@ -67,6 +72,43 @@ header nav ul li a:hover {
 }
 
 .nav-toggle:focus {
+  outline: none;
+}
+
+header nav ul.active {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav ul.active li {
+  margin-bottom: 15px;
+}
+
+header nav ul.active li a {
+  font-size: 1.2rem;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #ffcc00;
+}
+
+.back-to-top:focus {
   outline: none;
 }
 
@@ -147,45 +189,74 @@ footer ul li a:hover {
   color: #fff;
 }
 
-/* Forms */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Dark Mode */
+body.dark-mode header {
+  background-color: #1a1a1a;
 }
 
-form input, form textarea {
+body.dark-mode footer {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode main {
+  background-color: #2c2c2c;
+  color: #f9f9f9;
+}
+
+body.dark-mode article.post {
+  background-color: #3a3a3a;
+  color: #ddd;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
   font-size: 1rem;
-}
-
-form button {
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: #ffcc00;
+  color: #333;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 1.125rem;
-  transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
 
-form button:hover {
-  background-color: #555;
+.dark-mode-toggle:hover {
+  background-color: #ff9900;
 }
 
-form input:focus, form textarea:focus {
+.dark-mode-toggle:focus {
   outline: none;
-  border-color: #ffcc00;
-  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Fade-in Effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lazy Loading Placeholder */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img[data-src] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img:not([data-src]) {
+  opacity: 1;
+}
+
+img[src] {
+  opacity: 1;
 }
 
 /* Categories Styling */
