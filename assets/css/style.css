@@ -1,50 +1,277 @@
-/* Basic Styles */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
-}
-
-header {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-header h1 {
   margin: 0;
+  padding: 0;
 }
 
-nav ul {
-  padding: 0;
-  list-style: none;
+/* Layout Structure */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
 }
 
-nav ul li {
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+header nav ul li {
   display: inline;
   margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  margin-top: 20px;
+header nav ul li a:hover {
+  color: #ffcc00;
 }
 
-section {
-  margin: 20px;
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+/* Main Content Styling */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+main h1, main h2, main h3 {
+  margin-bottom: 10px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+main p {
+  margin: 15px 0;
+  font-size: 1.125rem;
+  color: #555;
+}
+
+article.post {
+  background-color: #fff;
   padding: 20px;
-  background: #fff;
+  margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article.post h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+article.post p {
+  font-size: 1rem;
+  color: #666;
+}
+
+article.post .content {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #fff;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.125rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Categories Styling */
+#categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#categories ul li {
+  margin: 10px;
+}
+
+#categories ul li a {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#categories ul li a:hover {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #eee;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Mobile Navigation */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 0;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Article and Post Styling */
+  article.post h1 {
+    font-size: 1.75rem;
+  }
+
+  article.post p {
+    font-size: 0.95rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding: 0 10px;
+  }
 }
