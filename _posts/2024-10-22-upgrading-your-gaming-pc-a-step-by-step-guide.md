@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Upgrading Your Gaming PC: A Step-by-Step Guide"
+title: "Upgrading Your Gaming PC A Step-by-Step Guide"
 date: 2024-10-22
 categories: guides
 ---
